@@ -40,3 +40,40 @@ except ValueError:
     print("I am sorry, but that is not a valid number")
 else:
     print("Player 1 is older tha player 2 by a factor of", res)
+
+#Exceptions
+try:
+    num = input("Give me a number")
+    num = int(num)
+    print("The square of the number read is:", num*num)
+except:
+    print("Please give me a proper number")
+
+#Example 2
+try:
+    num = input("Give me a number")
+    num = int(num)
+    num2 = input("Give me another number")
+    num2 = int(num2)
+    result = num / num2
+    print("The division result is", result)
+
+except ValueError:
+    print("Please give me a proper number")
+except ZeroDivisionError:(
+    print("The second number can not be zero"))
+
+#Example 3
+try:
+    num = input("Give me a number")
+    num = int(num)
+    num2 = input("Give me another number")
+    num2 = int(num2)
+    result = num / num2
+except ValueError:
+    print("Please give me a proper number")
+except ZeroDivisionError:
+    print("The second number can not be zero")
+except:
+    print("Some other exception I did not see coming")
+else:print("The division result is", result)
